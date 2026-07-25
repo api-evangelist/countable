@@ -1,0 +1,57 @@
+generated: '2026-07-20'
+method: searched
+source: live probe of /.well-known/ on the Countable and successor Actionable hosts
+result: none
+note: >-
+  No /.well-known discovery documents are published. The legacy Countable hosts
+  return HTTP 200 for every probed path only because www.countable.com catch-all
+  302-redirects to https://www.myactionable.com/ and serves the marketing homepage
+  — there is no discovery document at any of these paths. The successor host
+  returns a clean 404 for all of them.
+hosts:
+- host: https://www.countable.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 302
+    resolved: https://www.myactionable.com/
+    present: false
+  - path: /.well-known/openid-configuration
+    status: 302
+    resolved: https://www.myactionable.com/
+    present: false
+  - path: /.well-known/oauth-authorization-server
+    status: 302
+    resolved: https://www.myactionable.com/
+    present: false
+  - path: /.well-known/api-catalog
+    status: 302
+    resolved: https://www.myactionable.com/
+    present: false
+  - path: /.well-known/ai-plugin.json
+    status: 302
+    resolved: https://www.myactionable.com/
+    present: false
+- host: https://www.myactionable.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    present: false
+  - path: /.well-known/openid-configuration
+    status: 404
+    present: false
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    present: false
+  - path: /.well-known/api-catalog
+    status: 404
+    present: false
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    present: false
+  - path: /llms.txt
+    status: 404
+    present: false
+  - path: /robots.txt
+    status: 200
+    present: true
+    note: comment-only stub, no directives

@@ -1,20 +1,80 @@
 aid: countable
 name: Countable
-description: Countable is a company surfaced as a portfolio company of canaan-partners and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Countable was a civic-engagement technology company backed by Canaan Partners
+  (seed, partner Joydeep Bhattacharyya) that built a digital platform helping citizens
+  understand what Congress was doing in Washington and contact their elected representatives
+  directly, later extending the same advocacy tooling to organizations and brands.
+  As of this enrichment pass the Countable brand is no longer operating independently:
+  both countable.com and countable.us HTTP 302 to https://www.myactionable.com/, the
+  home of Actionable, a self-service advocacy campaign platform made by CSAG that offers
+  petitions, pledges, lawmaker-message campaigns, supporter video collection, lead capture,
+  polling and in-platform real-time campaign reporting on a $29.99/month self-service
+  plan. No public developer portal, API documentation, OpenAPI definition, SDK, package,
+  webhook catalog, MCP server or /.well-known discovery surface was found on either the
+  legacy Countable hosts or the successor Actionable host during this pass.'
 url: https://raw.githubusercontent.com/api-evangelist/countable/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.myactionable.com/assets/home-page/og-1ca4d6851a13cbfae0adbcc439b63fe44d3d78e763519a000153f50269117fe3.webp
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - canaan-partners
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: rebranded
+x-successor: https://www.myactionable.com/
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Civic Technology
+- Government
+- Advocacy
+- Political Engagement
+- Nonprofit
+- SaaS
 apis: []
+common:
+- type: Website
+  url: https://www.myactionable.com/
+- type: LegacyWebsite
+  url: https://www.countable.com/
+- type: About
+  url: https://www.myactionable.com/about
+- type: Support
+  url: https://www.myactionable.com/contact
+- type: FAQ
+  url: https://www.myactionable.com/faq
+- type: Login
+  url: https://www.myactionable.com/sessions/new
+- type: TermsOfService
+  url: https://www.myactionable.com/legal/terms
+- type: PrivacyPolicy
+  url: https://www.myactionable.com/legal/privacy
+- type: DataProcessingAgreement
+  url: https://www.myactionable.com/legal/dpa
+- type: SubscriptionAgreement
+  url: https://www.myactionable.com/legal/csa
+- type: LLMsTxt
+  url: llms/countable-llms.txt
+- type: DomainSecurity
+  url: security/countable-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
